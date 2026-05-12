@@ -1,5 +1,5 @@
 export async function exchangeGoogleCodeForSession(codeResponse: any) {
-  const res = await fetch("http://localhost:5231/api/auth/google", {
+  const res = await fetch("http://localhost:5231/api_dm/auth/google", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(codeResponse),

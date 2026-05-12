@@ -24,3 +24,43 @@ body {
   color: var(--foreground);
   font-family: var(--font-roboto-mono), Arial, Helvetica, sans-serif;
 }
+
+.train-4-icon, .train-5-icon, .train-6-icon{
+  background-color: #009952;
+}
+
+.train-A-icon, .train-C-icon, .train-E-icon{
+  background-color: #0062CF;
+}
+
+.train-B-icon, .train-D-icon, .train-F-icon, .train-M-icon{
+  background-color: #EB6800;
+}
+
+.train-G-icon{
+  background-color: #799534;
+}
+
+.train-J-icon, .train-Z-icon {
+  background-color: #8E5C33;
+}
+
+.train-S-icon, .train-L-icon {
+  background-color: #7C858C;
+}
+
+.train-R-icon, .train-Q-icon, .train-N-icon, .train-W-icon  {
+  background-color: #F6BC26;
+}
+
+.train-1-icon, .train-2-icon, .train-3-icon  {
+  background-color: #D82233;
+}
+.train-7-icon  {
+  background-color: #9A38A1;
+}
+
+.train-SIR-icon  {
+  background-color: #08179C;
+  font-size: 2em !important;
+}

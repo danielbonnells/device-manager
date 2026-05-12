@@ -3,9 +3,9 @@ import type { NextRequest } from 'next/server';
 
 export function middleware(req: NextRequest) {
   const token = req.cookies.get('session')?.value;
-
+  
   if (!token) {
-    const loginUrl = new URL('/', req.url);
+    const loginUrl = new URL('/login', req.url);
     return NextResponse.redirect(loginUrl);
   }
 

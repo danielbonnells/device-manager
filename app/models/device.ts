@@ -8,5 +8,5 @@ export interface Device {
   apiKey: string;
   timeZone: TimeZone;
   registeredAt: string; 
-  stops: any[];
+  routeTopics: any[];
 }
