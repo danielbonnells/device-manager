@@ -15,7 +15,7 @@ export default function AuthForm() {
   const googleLogin = useGoogleLogin({
     onSuccess: async (codeResponse) => {
       try {
-        const res = await fetch('http://localhost:5231/api_dm/auth/google', {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api_dm/auth/google`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json'},
           body: JSON.stringify({ code: codeResponse.code }),
@@ -31,7 +31,7 @@ export default function AuthForm() {
         }
       } catch (err) {
         console.error(err);
-        console.log(codeResponse)
+        // console.log(codeResponse)
         setMessage('Error during Google login.');
       }
     },
@@ -45,10 +45,9 @@ export default function AuthForm() {
     e.preventDefault();
     setLoading(true);
     setMessage('');
-    console.log("aqui")
     const endpoint = isLogin
-      ? 'http://localhost:5231/api_dm/auth/login'
-      : 'http://localhost:5231/api_dm/auth/register';
+      ? `${process.env.NEXT_PUBLIC_API_URL}/api_dm/auth/login`
+      : `${process.env.NEXT_PUBLIC_API_URL}/api_dm/auth/register`;
 
     const res = await fetch(endpoint, {
       method: 'POST',
@@ -61,11 +60,7 @@ export default function AuthForm() {
 
     if (res.ok) {
       setMessage(isLogin ? 'Login successful ✅' : 'Account created 🎉');
-      // router.push('/dashboard');
-      console.log("here")
- // 1. Refresh the router cache
       router.refresh(); 
-      // 2. Perform the redirect
       router.push('/dashboard');
       
     } else {

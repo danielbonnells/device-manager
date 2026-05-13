@@ -1,3 +1,5 @@
+import { RouteDto } from "./routeDto";
+
 export interface Station {
     id: number;
     gtfsStopId: string;
@@ -19,6 +21,6 @@ export interface Station {
     // adaSouthbound: number;
     // adaNotes: string;
     // georeference: string;
-    routes: { [routeKey: string]: string };
+    routes: { [routeKey: string]:  RouteDto  };
 }
 
