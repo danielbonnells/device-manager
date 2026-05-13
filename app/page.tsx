@@ -22,7 +22,7 @@ export default function Home() {
         });
 
         if (res.ok) {
-          router.push('/dashboard');
+          window.location.href = '/dashboard'; 
         } else {
           const data = await res.json();
         }

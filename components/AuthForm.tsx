@@ -24,7 +24,7 @@ export default function AuthForm() {
 
         if (res.ok) {
           setMessage('Logged in with Google ✅');
-          router.push('/dashboard');
+          window.location.href = '/dashboard'; 
         } else {
           const data = await res.json();
           setMessage(data.message || 'Google login failed.');
@@ -61,7 +61,7 @@ export default function AuthForm() {
     if (res.ok) {
       setMessage(isLogin ? 'Login successful ✅' : 'Account created 🎉');
       router.refresh(); 
-      router.push('/dashboard');
+      window.location.href = '/dashboard'; 
       
     } else {
       setMessage(data.message || 'Something went wrong.');
