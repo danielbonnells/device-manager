@@ -42,7 +42,7 @@ export default function Dashboard() {
     } else if (response.status === 409) {
       alert(`❌ Error: ${responseData.Message}`);
     } else if (response.status === 401) {
-      alert('❌ Error: You must be logged in to register a device.');
+      alert(`❌ Error: ${responseData.Message}`);
     } else {
       alert('An unexpected error occurred during registration.');
     }
