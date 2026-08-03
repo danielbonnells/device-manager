@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Roboto_Mono } from "next/font/google";
 
-// import "./globals.css";
+import "./globals.css";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 
 const geistSans = Geist({

@@ -39,7 +39,6 @@ export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-50 font-sans p-6 selection:bg-emerald-100">
       <main className="w-full max-w-2xl bg-white rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-200 overflow-hidden flex flex-col">
-        
         {/* Visual Header / Hero Section */}
         <div className="bg-slate-900 p-12 text-center sm:text-left relative overflow-hidden">
           <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-emerald-500/10 rounded-full blur-3xl"></div>
@@ -53,6 +52,19 @@ export default function Home() {
 
         <div className="p-8 sm:p-12 flex flex-col gap-10">
           
+                    {/* Video Section */}
+          <section className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-md border border-slate-200">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/8bdxKppQFZc?si=x7W7qUgA-ZkZZ4wc"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </section>
+
           {/* Features Section */}
           <section>
             <h2 className="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-6">
